@@ -9,6 +9,11 @@ public class Lesson3 {
             else ints1[i] = 0;
             System.out.println(ints1[i]);
         }
+        int[] ints2 = new int[100];
+        for (int i = 0; i < ints2.length; i++){
+            ints2[i] = i+1;
+            System.out.println(ints2[i]);
+        }
     }
 
 }
