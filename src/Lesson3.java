@@ -23,6 +23,23 @@ public class Lesson3 {
             else ints31[i] = ints3[i];
             System.out.println(ints31[i]);
         }
+        int[][] ints4 = new int[5][5];
+        for (int i = 0; i < 5; i++){
+            for (int j = 0; j < 5; j++){
+                if (i == j){
+                    ints4[i][j] = 1;
+                    System.out.println(ints4[i][j]);
+                }
+            }
+        }
+        for (int i = 4; i>0; i-- ){
+            for (int j = 4; j>0; j--){
+                if (i == j){
+                    ints4[i][j] = 1;
+                    System.out.println(ints4[i][j]);
+                }
+            }
+        }
     }
 
 }
