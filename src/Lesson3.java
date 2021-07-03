@@ -60,6 +60,11 @@ public class Lesson3 {
         }
         System.out.println(min + ", "+max );
 
+        int[] m = {1,3,4,5,3,8,5};
+        checkBalance(m);
+        System.out.println(checkBalance(m));
+
+
     }
     // пятое задание
     public static int[] massiv(int a , int b){
@@ -69,6 +74,20 @@ public class Lesson3 {
         }
 
         return ints;
+    }
+    // Седьмое задание
+    public static boolean checkBalance(int[] massiv){
+        int left = 0;
+        int right = 0;
+        for (int i = 0; i<massiv.length; i++){
+            left = left+massiv[i];
+            for (int j = (i+1); j<massiv.length;j++ ){
+                right = right+massiv[j];
+            }
+            if (left == right){
+                return true;
+            }
+        }return false;
     }
 
 
