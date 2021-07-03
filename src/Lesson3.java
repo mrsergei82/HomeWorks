@@ -40,6 +40,16 @@ public class Lesson3 {
                 }
             }
         }
+        massiv(5, 3);
+
+    }
+    public static int[] massiv(int a , int b){
+        int[] ints = new int[a];
+        for (int i = 0; i<a; i++){
+            ints[i] = b;
+        }
+
+        return ints;
     }
 
 }
