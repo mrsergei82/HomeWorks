@@ -89,6 +89,14 @@ public class Lesson3 {
             }
         }return false;
     }
+    // восьмое
+    public static void shift(int[] mas, int num){
+        int[] newMas = new  int[mas.length];
+        for (int i = 0; i<mas.length; i++){
+            newMas[i] = mas[i+num];
+            mas[mas.length]=mas[i];
+        }
+    }
 
 
 }
