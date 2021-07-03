@@ -14,6 +14,15 @@ public class Lesson3 {
             ints2[i] = i+1;
             System.out.println(ints2[i]);
         }
+        int[] ints3 = {1,5,3,2,11,4,5,2,4,8,9,1};
+        int[] ints31 = new int[12];
+        for (int i = 0; i < ints3.length; i++){
+            if (ints3[i] < 6){
+                ints31[i] = ints3[i]*2;
+            }
+            else ints31[i] = ints3[i];
+            System.out.println(ints31[i]);
+        }
     }
 
 }
