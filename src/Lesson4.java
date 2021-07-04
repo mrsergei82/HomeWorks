@@ -99,52 +99,46 @@ public class Lesson4 {
     // Проверка победы
     public static boolean checkWin(char symb) {
         int numb = 0;
-        for (int i =0; i<SIZE; i++){
-            for (int j = 0; j<SIZE; j++){
-                if (map[i][j]==symb){
-                    numb= numb+1;
-                    if (numb == DOTS_TO_WIN){
-                        return true;
-                    }
-                }else break;
-                numb = 0;
-            }
-            if (map[i][0]==symb){
-                numb = numb+1;
-                if (numb == DOTS_TO_WIN){
-                    return true;
-                }numb=0;
-            }else if (map[i][1]==symb){
-                numb=numb+1;
-                if (numb==DOTS_TO_WIN){
-                    return true;
-                }numb=0;
-            }else if (map[i][2]==symb){
-                numb=numb+1;
-                if (numb==DOTS_TO_WIN){
-                    return true;
-                }numb=0;
-            }
-
-
-        }return false;
-        }
-
-
-
-
-    public static boolean isMapFull() {
+        int numb2 = 0;
+        int numbd = 0;
+        int numbd2 =0;
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
-                if (map[i][j] == DOT_EMPTY) return false;
+                if (map[i][j] == symb) {
+                    numb++;
+                } else numb = 0;
+                if (map[j][i] == symb) {
+                    numb2++;
+                } else numb2 = 0;
             }
+            if (numb == DOTS_TO_WIN || numb2 == DOTS_TO_WIN) {
+                return true;
+            }
+            if (map[i][i]==symb){
+                numbd ++;
+            }else numbd = 0;
+            if (map[i][SIZE-1-i]==symb){
+                numbd2 ++;
+            }else numbd2 =0;
+            if (numbd == DOTS_TO_WIN || numbd2 == DOTS_TO_WIN){
+                return true;
+            }
+
         }
-        return true;
+        return false;}
+
+
+        public static boolean isMapFull () {
+            for (int i = 0; i < SIZE; i++) {
+                for (int j = 0; j < SIZE; j++) {
+                    if (map[i][j] == DOT_EMPTY) return false;
+                }
+            }
+            return true;
+        }
+
+
     }
-
-
-
-}
 
 
 
