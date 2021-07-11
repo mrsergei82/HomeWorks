@@ -12,6 +12,9 @@ public class Main {
         cat.swim(5);
         dog.swim(15);
         cat1.run(300);
+        System.out.println("Создано "+Cat.countCat+" котов");
+        System.out.println("Создано "+Dog.countDog+" собак");
+        System.out.println("И всего "+Animal.animalCount+" животных");
     }
 
 
