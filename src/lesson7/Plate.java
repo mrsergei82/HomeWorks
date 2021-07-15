@@ -19,9 +19,9 @@ public class Plate {
     public void showInfo() {
         System.out.println("plate: " + food);
     }
-   // public void addFood(){
-     //   if (){
-       //     food = food+40;
-       // }
-    //}
+    public void addFood(){
+        System.out.println("Добавляем еды");
+        food += 20;
+
+    }
 }
