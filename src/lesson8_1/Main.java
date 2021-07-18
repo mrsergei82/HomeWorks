@@ -1,6 +1,5 @@
 package lesson8_1;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -10,19 +9,21 @@ public class Main {
                 "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut",
                 "olive", "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"
         };
+        String word ;
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i<words.length; i++){
+            word = words[i];
             System.out.println("Угадайте слово");
             while (true) {
                 String answer = scanner.nextLine();
                 char[] str = new char[15];
-                for (int j = 0; j < words[i].length(); j++) {
-                    if (answer.charAt(j) == words[i].charAt(j)) {
-                        str[j] = words[i].charAt(j);
-                    } else str[j] = 35;
+                for (int j = 0; j < answer.length(); j++) {
+                    if (answer.charAt(j) == word.charAt(j)) {
+                        str[j] = word.charAt(j);
+                    } else str[j] = 0;
                 }
                 System.out.println(str);
-                if (answer.equals(words[i])) {
+                if (answer.equals(word)) {
                     break;
                 }
             }
